@@ -320,3 +320,15 @@ export {
   LayoutTagIndex,
   CONFIG as THEME_CONFIG
 }
+
+// 添加背景样式
+if (typeof document !== 'undefined') {
+    const style = document.createElement('style');
+    style.textContent = `
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            background-attachment: fixed !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
