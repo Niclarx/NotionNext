@@ -25,6 +25,13 @@ import { Style } from './style'
 
 const Live2D = dynamic(() => import('@/components/Live2D'))
 
+// 注入全局背景样式
+if (typeof window !== 'undefined') {
+    document.body.style.background = "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+    document.body.style.backgroundAttachment = "fixed";
+}
+
+
 // 主题全局状态
 const ThemeGlobalFukasawa = createContext()
 export const useFukasawaGlobal = () => useContext(ThemeGlobalFukasawa)
